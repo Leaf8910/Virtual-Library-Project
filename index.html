@@ -5,18 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual-Library-Project</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1 class="main-title">VirtualLibrary Project</h1>
+    <header>
+        <h1>VirtualLibrary Project</h1>
+        <div class="container">
+            <label for="sortBy">Sort by:</label>
+            <select id="sort">
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="pages">Pages</option>
+                <option value="readToggle">Read</option>
+            </select>
         </div>
-        <div class="content">
-            <button class="add">Add</button>
-            
+    </header>
+
+    <button id="addButton">Add Book +</button>
+
+    <div id="book-add-form">
+        <button id="close">X</button>
+        <input type="text" id="book-title" placeholder="Title">
+        <input type="text" id="book-author" placeholder="Author">
+        <input type="number" id="book-pages" placeholder="Page Count">
+        <div class="readContainer">
+            <p>Have you read it?</p>
+            <input type="checkbox" name="title" id="book-read">
         </div>
+        <button id="addBook">Add</button>
     </div>
-    <script src="script.js"></script>
+
+    <div id="bookContainer"></div>
+
+    <script src="script.js" async defer></script>
 </body>
 </html>
