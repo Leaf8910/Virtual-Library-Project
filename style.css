@@ -33,12 +33,145 @@ h1 {
 
 .container label,
 #sort {
-  font-size: 1.25rem;
-  margin: .5rem
+  font-size: 1.2rem;
+  margin: .6rem
 }
 
-#sort-by,
-#sort-by option {
+#sortBy,
+#sortBy option {
   color: #222;
 }
 
+#addButton {
+  font-size: 1.3rem;
+  margin: .5rem;
+  background: #222;
+  padding: .5rem;
+  border-radius: 10px;
+  transition: .2s;
+  width: 8em;
+}
+
+#add-button:hover {
+  background: #333
+}
+
+#book-add-form {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #222;
+}
+
+#book-add-form.active {
+  display: flex;
+}
+
+#close {
+  position: absolute;
+  top:0;
+  right:0;
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem;
+  border-radius: 15px;
+  color: #222;
+  font-size: 1.5rem;
+}
+
+.readContainer {
+  display: flex;
+  align-items: center;
+}
+
+#book-add-form p,
+input {
+  margin: .5rem;
+  font-size: 1.5rem;
+  border-radius: 15px;
+}
+
+#book-add-form input {
+  color: #222;
+  text-align: center;
+}
+
+#book-read {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#addBook {
+  width: 10rem;
+  height: 1.5rem;
+  background: #EEE;
+  color: #222;
+  border-radius: 15px;
+  margin: .5rem;
+}
+
+#bookContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  background: #444;
+  width: 17rem;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 15px;
+}
+
+.book-title {
+  border-bottom: 1px solid #EEE;
+  padding-bottom: .5rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.book-author,
+.book-pages {
+  padding: .25rem;
+}
+
+.read-button,
+.remove-button {
+  color: #222;
+  border-radius: 15px;
+  margin: .25rem;
+}
+
+.remove-button {
+    background-color: #8f0c0c;
+}
+
+.read-true {
+  background: #7ae378;
+}
+
+.read-false {
+  background: #ee7373;
+}
+
+
+@media only screen and (min-width:600px) {
+    #book-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media only screen and (min-width:1000px) {
+    #book-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
